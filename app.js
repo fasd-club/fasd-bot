@@ -26,19 +26,10 @@ bot.onText(/\@weather$/, (msg, match) => {
 
 });
 
-bot.onText(/heloisa/i, (msg, match) => {
-  const chatId = msg.chat.id;
-  bot.sendMessage(chatId, "¯\\_(ツ)_/¯", { parse_mode: 'markdown'});
-});
-
 bot.onText(/janete/i, (msg, match) => {
   const chatId = msg.chat.id;
 
   var output = 'https://goo.gl/hdVn48';
 
   bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
-bot.on('message', (msg) => {
-  const chatId = msg.chat.id;
 });
