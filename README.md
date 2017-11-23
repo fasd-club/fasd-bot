@@ -8,13 +8,13 @@ This is our Telegram bot, created with the goal of providing utilities and fun t
 
 Once this project has just been created and we have a lot of other priorities, the deploy process is quite simple yet.
 
-The changes are applied to production every time something is pushed to master branch
+The changes are applied to production every time something is pushed to master branch.
 
 **How it works?**
 
-1. Changes are pushed to master branch
-2. Github sends a webhook to deploy endpoint of production server, that works based on execution of `deploy/deploy.js`
-3. The script `deploy.sh` is executed, making the server pull the changes and restart the  applications
+1. Changes are pushed to master branch.
+2. Github sends a webhook to deploy endpoint of production server, that works based on execution of `deploy/deploy.js`.
+3. The script `deploy.sh` is executed, making the server pull the changes and restart the  applications.
 
 ## Built With
 
