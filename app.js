@@ -12,7 +12,7 @@ bot.onText(/\@weather$/, (msg, match) => {
 
       var current_observation = result.current_observation;
 
-      var output = `Current temperature on Stockholm, Sweden\n`;
+      var output = `Current temperature on <b>Stockholm, Sweden</b>\n`;
       output += `<b>${current_observation.temp_c} °C</b> (Feels like ${current_observation.feelslike_c} °C)\n\n`;
 
       for (data of result.hourly_forecast.slice(0,7)) {
