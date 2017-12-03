@@ -41,3 +41,12 @@ bot.onText(/galinha/i, (msg, match) => {
 
   bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
 });
+
+bot.onText(/heloisa/i, (msg, match) => {
+  const chatId = msg.chat.id;
+
+  var output = 'https://goo.gl/HRYbzN';
+
+  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
+});
+
