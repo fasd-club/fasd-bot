@@ -8,7 +8,7 @@ build:
 
 .PHONY: start
 start:
-	docker run --name fasd-bot --rm -d -v $(shell pwd):/src -e TELEGRAM_TOKEN=$(TELEGRAM_TOKEN) -e NODE_ENV=$(NODE_ENV) fasd-bot:latest
+	docker run --name fasd-bot --rm -v $(shell pwd):/src -e TELEGRAM_TOKEN=$(TELEGRAM_TOKEN) -e NODE_ENV=$(NODE_ENV) fasd-bot:latest
 
 .PHONY: restart
 restart:
