@@ -1,8 +1,8 @@
 FROM node:alpine
 
-COPY package.json /src/
-WORKDIR /src
+COPY ./entrypoint.sh /entrypoint.sh
 
-CMD npm install npm@latest -g && \
-    yarn && \
-    sh ./start.sh
+RUN chmod +x /entrypoint.sh
+
+WORKDIR /src
+ENTRYPOINT ["/entrypoint.sh"]
