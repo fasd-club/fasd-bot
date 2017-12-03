@@ -9,7 +9,10 @@
   "author": "Gabriel Gomes",
   "license": "ISC",
   "dependencies": {
-    "node-telegram-bot-api": "^0.29.0",
-    "wunderground-api-client": "^0.1.0"
+    "node-telegram-bot-api": "0.29.0",
+    "wunderground-api-client": "0.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.11.0"
   }
 }

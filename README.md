@@ -4,6 +4,13 @@ This is our Telegram bot, created with the goal of providing utilities and fun t
 
 <img src="https://image.ibb.co/f24syR/3ca6c26c_e812_4e24_b3f6_bd279a2e0cd4.jpg" width="100"/>
 
+## Get Started
+- Store the bot token into an environment variable named `TELEGRAM_TOKEN`.
+- Build the bot running `make build`.
+- Start the bot running `make start`.
+
+The code will be automatically hot reloaded in development environment, but if you install new dependencies you should restart the bot running `make restart`.
+
 ## Deployment
 
 Once this project has just been created and we have a lot of other priorities, the deploy process is quite simple yet.

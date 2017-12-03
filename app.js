@@ -33,3 +33,11 @@ bot.onText(/janete/i, (msg, match) => {
 
   bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
 });
+
+bot.onText(/galinha/i, (msg, match) => {
+  const chatId = msg.chat.id;
+
+  var output = 'galinha? https://i.imgur.com/R77BVs1.png';
+
+  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
+});
