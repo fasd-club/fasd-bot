@@ -18,6 +18,7 @@ term_handler() {
 trap 'kill "$!"; term_handler' SIGTERM
 
 # run application
+npm install --silent
 
 if [ "$NODE_ENV" = "production" ]
 then
