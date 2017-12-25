@@ -29,7 +29,7 @@ bot.onText(/\@weather$/, (msg, match) => {
 bot.onText(/janete/i, (msg, match) => {
   const chatId = msg.chat.id;
 
-  var output = 'https://goo.gl/VNco83';
+  var output = 'https://preview.ibb.co/k9niAR/jn.jpg';
 
   bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
 });
