@@ -39,7 +39,7 @@ simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
 
 bot.onText(/comida/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-hungry.gif', { caption: 'Opa, comida?? Onde?' }));
 bot.onText(/feliz/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-happy.gif'));
-const mrtsProfile = 'https://i.imgur.com/04sinBI.jpg';
-simpleTextMatch(/mirtes/i, mrtsProfile);
-simpleTextMatch(/cachorr(o|a)/i, mrtsProfile);
-simpleTextMatch(/(🐶|🐩)/i, mrtsProfile);
+simpleTextMatch(/(mirtes|cachorr(o|a)|🐶|🐩)/i, 'https://i.imgur.com/04sinBI.jpg');
+
+simpleTextMatch(/(🐮|va(ca|quinha))/i, 'https://i.imgur.com/EmusbT3.png');
+simpleTextMatch(/valk(i|í)ria/i, 'http://braaiboy.co.za/wp-content/uploads/2015/09/mad-cow.png');
