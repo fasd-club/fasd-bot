@@ -26,27 +26,20 @@ bot.onText(/\@weather$/, (msg, match) => {
 
 });
 
-bot.onText(/janete/i, (msg, match) => {
-  const chatId = msg.chat.id;
+const simpleTextMatch = (regex, output) => {
+  bot.onText(regex, (msg) => {
+    bot.sendMessage(msg.chat.id, output, { parse_mode: 'markdown'});
+  });
+};
 
-  var output = 'https://preview.ibb.co/k9niAR/jn.jpg';
+simpleTextMatch(/janete/i, 'https://preview.ibb.co/k9niAR/jn.jpg');
+simpleTextMatch(/galinha/i, 'galinha? https://i.imgur.com/R77BVs1.png');
 
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
+simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
 
-bot.onText(/galinha/i, (msg, match) => {
-  const chatId = msg.chat.id;
+bot.onText(/comida/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-hungry.gif', { caption: 'Opa, comida?? Onde?' }));
+bot.onText(/feliz/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-happy.gif'));
+simpleTextMatch(/(mirtes|cachorr(o|a)|🐶|🐩)/i, 'https://i.imgur.com/04sinBI.jpg');
 
-  var output = 'galinha? https://i.imgur.com/R77BVs1.png';
-
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
-bot.onText(/heloisa/i, (msg, match) => {
-  const chatId = msg.chat.id;
-
-  var output = 'https://goo.gl/HRYbzN';
-
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
+simpleTextMatch(/(🐮|va(ca|quinha))/i, 'https://i.imgur.com/EmusbT3.png');
+simpleTextMatch(/valk(i|í)ria/i, 'http://braaiboy.co.za/wp-content/uploads/2015/09/mad-cow.png');
