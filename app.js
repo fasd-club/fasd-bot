@@ -26,27 +26,12 @@ bot.onText(/\@weather$/, (msg, match) => {
 
 });
 
-bot.onText(/janete/i, (msg, match) => {
-  const chatId = msg.chat.id;
+const simpleTextMatch = (regex, output) => {
+  bot.onText(regex, (msg) => {
+    bot.sendMessage(msg.chat.id, output, { parse_mode: 'markdown'});
+  });
+};
 
-  var output = 'https://preview.ibb.co/k9niAR/jn.jpg';
-
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
-bot.onText(/galinha/i, (msg, match) => {
-  const chatId = msg.chat.id;
-
-  var output = 'galinha? https://i.imgur.com/R77BVs1.png';
-
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
-bot.onText(/heloisa/i, (msg, match) => {
-  const chatId = msg.chat.id;
-
-  var output = 'https://goo.gl/HRYbzN';
-
-  bot.sendMessage(chatId, output, { parse_mode: 'markdown'});
-});
-
+simpleTextMatch(/janete/i, 'https://preview.ibb.co/k9niAR/jn.jpg');
+simpleTextMatch(/galinha/i, 'galinha? https://i.imgur.com/R77BVs1.png');
+simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
