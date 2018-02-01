@@ -34,4 +34,12 @@ const simpleTextMatch = (regex, output) => {
 
 simpleTextMatch(/janete/i, 'https://preview.ibb.co/k9niAR/jn.jpg');
 simpleTextMatch(/galinha/i, 'galinha? https://i.imgur.com/R77BVs1.png');
+
 simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
+
+bot.onText(/comida/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-hungry.gif', { caption: 'Opa, comida?? Onde?' }));
+bot.onText(/feliz/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-happy.gif'));
+const mrtsProfile = 'https://i.imgur.com/04sinBI.jpg';
+simpleTextMatch(/mirtes/i, mrtsProfile);
+simpleTextMatch(/cachorr(o|a)/i, mrtsProfile);
+simpleTextMatch(/(🐶|🐩)/i, mrtsProfile);
