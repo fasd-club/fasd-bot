@@ -36,6 +36,7 @@ simpleTextMatch(/janete/i, 'https://preview.ibb.co/k9niAR/jn.jpg');
 simpleTextMatch(/galinha/i, 'galinha? https://i.imgur.com/R77BVs1.png');
 
 simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
+simpleTextMatch(/m(é|e)h/i, 'https://www.organicfacts.net/wp-content/uploads/Sheep-1.jpg');
 
 bot.onText(/comida/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-hungry.gif', { caption: 'Opa, comida?? Onde?' }));
 bot.onText(/feliz/i, (msg) => bot.sendDocument(msg.chat.id, './sauce/mrtz-happy.gif'));
