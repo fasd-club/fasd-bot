@@ -35,8 +35,7 @@ const simpleTextMatch = (regex, output) => {
 simpleTextMatch(/janete/i, 'https://preview.ibb.co/k9niAR/jn.jpg');
 simpleTextMatch(/galinha/i, 'galinha? https://i.imgur.com/R77BVs1.png');
 
-simpleTextMatch(/m(a|á)rcia/i, 'https://res.cloudinary.com/postedin/image/upload/d_mascotas:no-image.jpg,w_1400,c_thumb,f_auto,q_80/mascotas/c-postedin-image-47429.jpeg');
-simpleTextMatch(/marcia/i, 'test');
+simpleTextMatch(/m(á|a)rcia/i, 'https://goo.gl/83RUAN');
 
 simpleTextMatch(/heloisa/i, 'https://goo.gl/HRYbzN');
 simpleTextMatch(/m(é|e)h/i, 'https://www.organicfacts.net/wp-content/uploads/Sheep-1.jpg');
