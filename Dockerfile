@@ -1,8 +1,10 @@
-FROM node:alpine
+FROM ruby:2.6.3-alpine3.10
 
-COPY ./entrypoint.sh /entrypoint.sh
+RUN apk --update add imagemagick
 
-RUN chmod +x /entrypoint.sh
-
+COPY . /src
 WORKDIR /src
-ENTRYPOINT ["/entrypoint.sh"]
+
+RUN bundle
+
+CMD ["/bin/sh", "-c", "ruby", "entrypoint.rb"]
