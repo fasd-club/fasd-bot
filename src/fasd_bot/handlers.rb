@@ -2,6 +2,7 @@ require 'fasd_bot/utils'
 
 HANDLERS = {
   /^-fasdeia- .+$/i => 'add_sticker',
+  /^-fasd- healthcheck$/i => 'healthcheck_reply'
 }.freeze
 
 def add_sticker(bot, message)
@@ -21,8 +22,20 @@ def add_sticker_from_picture(bot, message)
     png_sticker: Faraday::UploadIO.new(resized_image, 'image/png'),
     emojis: message.text.split(' ')[1]
   )
+rescue => e
+  bot.api.send_message(
+    chat_id: message.chat.id,
+    text: "Que morte horrível soldado. #{e.message}."
+  )
 end
 
-def add_sticker_from_sticker(message)
+def healthcheck_reply(bot, message)
+  bot.api.send_message(
+    chat_id: message.chat.id,
+    text: 'Tô aqui carniça'
+  )
+end
+
+def add_sticker_from_sticker(bot, message)
   #no-op @todo add a sticker
 end
