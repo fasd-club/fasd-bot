@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/fasd-245309/fasd-bot', '.' ]
+images:
+- 'gcr.io/fasd-245309/fasd-bot'
