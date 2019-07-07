@@ -7,4 +7,4 @@ WORKDIR /src
 
 RUN bundle
 
-CMD ["/bin/sh", "-c", "ruby", "entrypoint.rb"]
+CMD ["ruby", "entrypoint.rb"]
