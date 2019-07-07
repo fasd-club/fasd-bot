@@ -1,4 +1,5 @@
 require 'fasd_bot/utils'
+require 'fasd_bot/config'
 
 HANDLERS = {
   /^-fasdeia- .+$/i => 'add_sticker',
@@ -17,8 +18,8 @@ def add_sticker_from_picture(bot, message)
   resized_image = get_resized_image(image_url)
 
   puts bot.api.add_sticker_to_set(
-    user_id: 184425111,
-    name: 'FASDSticker_by_UmBeloBot',
+    user_id: Config::BOT_OWNER_ID,
+    name: Config::BOT_NAME,
     png_sticker: Faraday::UploadIO.new(resized_image, 'image/png'),
     emojis: message.text.split(' ')[1]
   )
