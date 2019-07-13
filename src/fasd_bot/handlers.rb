@@ -47,6 +47,6 @@ end
 def healthcheck_reply(bot, message)
   bot.api.send_message(
     chat_id: message.chat.id,
-    text: 'Tô aqui carniça'
+    text: 'Tô aqui carniça!'
   )
 end
