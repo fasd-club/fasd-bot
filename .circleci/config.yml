@@ -4,7 +4,7 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: gcloud components update
+      - run: gcloud components update --quiet
       - run: echo ${GOOGLE_AUTH} > ${HOME}/gcp-key.json
       - run: gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
       - run: gcloud --quiet config set project ${GCP_PROJECT}
