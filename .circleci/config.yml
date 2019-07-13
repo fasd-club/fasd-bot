@@ -7,8 +7,10 @@ jobs:
       - run: echo ${GOOGLE_AUTH} > ${HOME}/gcp-key.json
       - run: gcloud auth activate-service-account --key-file ${HOME}/gcp-key.json
       - run: gcloud --quiet config set project ${GCP_PROJECT}
-      - run: docker build --rm=false -t gcr.io/${GCP_PROJECT}/${IMAGE_NAME}:$CIRCLE_SHA1 .
-      - run: gcloud docker -- push gcr.io/${GCP_PROJECT}/${IMAGE_NAME}:$CIRCLE_SHA1
-      - run: gcloud compute instances update-container instance-1 --container-image gcr.io/${GCP_PROJECT}/${IMAGE_NAME}:$CIRCLE_SHA1
+      - run: docker build --rm=false -t gcr.io/${GCP_PROJECT}/${IMAGE_NAME} .
+      - run: gcloud docker -- push gcr.io/${GCP_PROJECT}/${IMAGE_NAME}
+      - run: gcloud config set compute/region us-central1
+      - run: gcloud config set compute/zone us-central1-a
+      - run: gcloud compute instances reset instance-1
 
 
