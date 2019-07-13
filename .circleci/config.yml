@@ -1,6 +1,7 @@
 version: 2
 jobs:
-  deploy:
+  build:
+    machine: true
     steps:
       - checkout
       - run: echo ${GOOGLE_AUTH} > ${HOME}/gcp-key.json
