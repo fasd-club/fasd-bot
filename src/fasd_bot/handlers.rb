@@ -3,7 +3,8 @@ require 'fasd_bot/config'
 
 HANDLERS = {
   /^-fasdeia- .+$/i => 'add_sticker_handler',
-  /^-fasd- healthcheck$/i => 'healthcheck_reply'
+  /^-fasd- healthcheck$/i => 'healthcheck_reply',
+  /^-fasd- (quarta|quartas)$/i => 'reply_quarta',
 }.freeze
 
 def get_resized_image(bot, file_id)
@@ -48,5 +49,23 @@ def healthcheck_reply(bot, message)
   bot.api.send_message(
     chat_id: message.chat.id,
     text: 'Tô aqui carniça!'
+  )
+end
+
+def reply_quarta(bot, message)
+  bot.api.send_message(
+    chat_id: message.chat.id,
+    text: """
+    Ode às Quartas-feiras
+
+Ó, quartas-feiras
+Por que me judiastes?
+Ó, quartas-feiras
+Por que sois tão distantes
+Tanto do final de semana passado
+Quanto do que está por vir
+Ó, quartas-feiras
+Por que não passastes...
+    """
   )
 end
