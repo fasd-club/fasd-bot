@@ -1,13 +1,16 @@
 require 'mini_magick'
 require 'fasd_bot/config'
 
-def get_image_url(file_result)
-  'https://api.telegram.org/file/bot'+Config::TOKEN+'/'+file_result['file_path']
-end
+module Utils
+  def self.get_file_url(file)
+    'https://api.telegram.org/file/bot'+Config::TOKEN+'/'+file['result']['file_path']
+  end
 
-def resize_image(image_url)
-  image = MiniMagick::Image.open(image_url)
-  image.resize '512x512'
-  image.format 'png'
-  image.path
+  def self.resize_image(file, dimensions = '512x512', format = 'png')
+    image_url = get_image_url(file)
+    img = MiniMagick::Image.open(image_url)
+    img.resize dimensions
+    img.format format
+    img
+  end
 end
