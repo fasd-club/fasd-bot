@@ -12,6 +12,8 @@ HANDLERS = [
 
 Telegram::Bot::Client.run(Config::TOKEN) do |bot|
   bot.listen do |message|
+    next unless message.text
+
     HANDLERS.each do |handler|
       begin
         handler.handle(bot, message) if handler.handle?(message)
@@ -21,6 +23,6 @@ Telegram::Bot::Client.run(Config::TOKEN) do |bot|
           text: "Que morte horrível soldado. #{e.message}."
         )
       end
-    end if message.text
+    end
   end
 end
