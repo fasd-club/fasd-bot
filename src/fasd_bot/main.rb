@@ -24,5 +24,6 @@ Telegram::Bot::Client.run(Config::TOKEN) do |bot|
         )
       end
     end
+    sleep 10
   end
 end
