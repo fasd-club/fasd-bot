@@ -10,7 +10,7 @@ HANDLERS = [
   GenericReplyHandler,
 ].freeze
 
-Telegram::Bot::Client.run(Config::TOKEN) do |bot|
+Telegram::Bot::Client.run(Config::TOKEN, timeout: 60) do |bot|
   bot.listen do |message|
     next unless message.text
 
@@ -24,6 +24,5 @@ Telegram::Bot::Client.run(Config::TOKEN) do |bot|
         )
       end
     end
-    sleep 10
   end
 end
