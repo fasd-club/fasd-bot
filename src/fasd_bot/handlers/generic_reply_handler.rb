@@ -22,18 +22,28 @@ module GenericReplyHandler
     case message.text
     when /^-fasd- healthcheck$/i
       'Tô aqui carniça!'
+    when /^-fasd- (terça|terças)$/i
+      """
+      Ó terça, não sois a segunda,
+      Que de tédio abunda
+      Porém sois sua prima,
+      Que em sua jornada nos torna saudosistas,
+      Fazendo-nos lembrar de felizes momentos de outrora,
+      Onde cada indivíduo felicidade emana,
+      No também conhecido 'final de semana'
+      """
     when /^-fasd- (quarta|quartas)$/i
       """
-    Ode às Quartas-feiras
+      Ode às Quartas-feiras
 
-Ó, quartas-feiras
-Por que me judiastes?
-Ó, quartas-feiras
-Por que sois tão distantes
-Tanto do final de semana passado
-Quanto do que está por vir
-Ó, quartas-feiras
-Por que não passastes...
+      Ó, quartas-feiras
+      Por que me judiastes?
+      Ó, quartas-feiras
+      Por que sois tão distantes
+      Tanto do final de semana passado
+      Quanto do que está por vir
+      Ó, quartas-feiras
+      Por que não passastes...
       """
   end
 end

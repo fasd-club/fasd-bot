@@ -3,7 +3,7 @@ require 'fasd_bot/config'
 
 module Utils
   def self.get_file_url(file)
-    'https://api.telegram.org/file/bot'+Config::TOKEN+'/'+file['result']['file_path']
+    "https://api.telegram.org/file/bot#{Config::TOKEN}/#{file['result']['file_path']}"
   end
 
   def self.resize_image(file, dimensions = '512x512', format = 'png')
