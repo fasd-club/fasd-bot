@@ -1,5 +1,4 @@
 require 'mini_magick'
-require 'fasd_bot/config'
 
 module Utils
   def self.get_file_url(file)

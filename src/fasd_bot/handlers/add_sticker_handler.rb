@@ -1,6 +1,3 @@
-require 'fasd_bot/config'
-require 'fasd_bot/utils'
-
 module AddStickerHandler
   def self.handle(bot, message)
     resized_image =
