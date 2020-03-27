@@ -14,7 +14,7 @@ module RemoveStickerHandler
 
     def get_last_sticker_id(bot)
       sticket_set = bot.api.get_sticker_set(name: Config::BOT_NAME)['result']
-      sticket_set['stickers'].last['file_unique_id']
+      sticket_set['stickers'].last['file_id']
     end
 
     def delete_sticker(bot, id)
