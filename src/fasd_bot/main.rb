@@ -1,12 +1,15 @@
 require 'telegram/bot'
 require 'fasd_bot/config'
+require 'fasd_bot/utils'
 
 require 'fasd_bot/handlers/add_sticker_handler'
+require 'fasd_bot/handlers/remove_sticker_handler'
 require 'fasd_bot/handlers/generic_reply_handler'
 
 # will be handled in the same order
 HANDLERS = [
   AddStickerHandler,
+  RemoveStickerHandler,
   GenericReplyHandler,
 ].freeze
 
