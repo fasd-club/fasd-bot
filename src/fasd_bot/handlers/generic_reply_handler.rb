@@ -47,6 +47,6 @@ Quanto do que está por vir
 Ó, quartas-feiras
 Por que não passastes...
       """
+    end
   end
-end
 end
