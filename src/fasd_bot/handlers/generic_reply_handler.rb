@@ -21,7 +21,7 @@ module GenericReplyHandler
     when /^-fasd- (sexta|sextas|sextou)/i
       'https://i.redd.it/gnzgfzhqxy301.jpg'
     when /^-fasd- healthcheck$/i
-      'Tô aqui carniça!'
+      ['Tô aqui carniça!', 'ACHOU QUE EU TINHA MORRIDO MACONHEIRO?'].sample
     when /^-fasd- (terça|terças)$/i
       """
       Ode às terças-feiras
