@@ -10,13 +10,15 @@ GEM
     descendants_tracker (0.0.4)
       thread_safe (~> 0.3, >= 0.3.1)
     equalizer (0.0.11)
-    faraday (0.15.4)
+    faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     ice_nine (0.11.2)
     inflecto (0.0.2)
-    mini_magick (4.9.4)
+    mini_magick (4.11.0)
     multipart-post (2.1.1)
-    telegram-bot-ruby (0.10.1)
+    ruby2_keywords (0.0.2)
+    telegram-bot-ruby (0.14.0)
       faraday
       inflecto
       virtus
@@ -35,4 +37,4 @@ DEPENDENCIES
   telegram-bot-ruby
 
 BUNDLED WITH
-   1.16.3
+   2.1.4

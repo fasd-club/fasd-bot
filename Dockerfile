@@ -1,4 +1,4 @@
-FROM ruby:2.6.3-alpine3.10
+FROM ruby:2-alpine
 
 RUN apk --update add imagemagick libpng libwebp
 
