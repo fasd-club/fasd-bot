@@ -13,7 +13,7 @@ HANDLERS = [
   GenericReplyHandler,
 ].freeze
 
-Telegram::Bot::Client.run(Config::TOKEN, timeout: 60) do |bot|
+Telegram::Bot::Client.run(Config::TELEGRAM_TOKEN, timeout: 60) do |bot|
   bot.listen do |message|
     next unless message.text
 

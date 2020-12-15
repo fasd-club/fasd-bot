@@ -13,7 +13,7 @@ module RemoveStickerHandler
     private
 
     def get_last_sticker_id(bot)
-      sticket_set = bot.api.get_sticker_set(name: Config::BOT_NAME)['result']
+      sticket_set = bot.api.get_sticker_set(name: Config::STICKER_COLLECTION_NAME)['result']
       sticket_set['stickers'].last['file_id']
     end
 
