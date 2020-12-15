@@ -17,11 +17,18 @@ $ docker build -t fasdbot:local .
 
 > :bulb: _You can label it however you want for local development. If you change the label, make sure to reuse it in all other Docker commands._
 
-Make sure to specify your [Telegram Bot API Token](https://core.telegram.org/bots) via the `TELEGRAM_TOKEN` env var. You can get an API Token from [The BotFather](https://t.me/botfather) if you don't have one.
+### Env vars
+
+A set of environment variables are needed to run the bot. Copy `.env-example` into `.env` and fill in the values to your needs.
+
+- `TELEGRAM_TOKEN` - Is the minimum **required** to run the bot. You can get an API Token from [The BotFather](https://t.me/botfather).
+- `STICKER_COLLECTION_NAME` - Neeeded only to manage a given sticker collection.
+- `STICKER_COLLECTION_OWNER_ID` - Neeeded only to manage a given sticker collection.
+
+Once you have your `.env` file properly set up, you can feed it to container when running it:
 
 ```bash
-# docker run -it -e TELEGRAM_TOKEN=YourTelegramBotAPIKeyGoesHere your-label:your-tag
-docker run -it -e TELEGRAM_TOKEN=YourTelegramBotAPIKeyGoesHere fasdbot:local
+docker run -it --env-file=.env fasdbot:local
 ```
 
 Your local bot should be up and running! You should be able message it directly on Telegram. To check if it's running properly, send it this message:

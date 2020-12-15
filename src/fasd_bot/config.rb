@@ -1,5 +1,5 @@
 module Config
-  TOKEN        = ENV['TELEGRAM_TOKEN'].freeze
-  BOT_NAME     = 'FASDSticker_by_UmBeloBot'.freeze
-  BOT_OWNER_ID = 184425111.freeze
+  TELEGRAM_TOKEN              = ENV['TELEGRAM_TOKEN'].freeze
+  STICKER_COLLECTION_NAME     = ENV['STICKER_COLLECTION_NAME'].freeze
+  STICKER_COLLECTION_OWNER_ID = ENV['STICKER_COLLECTION_OWNER_ID'].freeze
 end

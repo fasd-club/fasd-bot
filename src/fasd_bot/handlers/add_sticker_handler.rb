@@ -25,8 +25,8 @@ module AddStickerHandler
 
   def self.add_sticker_to_set(bot, resized_image, emojis)
     bot.api.add_sticker_to_set(
-      user_id: Config::BOT_OWNER_ID,
-      name: Config::BOT_NAME,
+      user_id: Config::STICKER_COLLECTION_OWNER_ID,
+      name: Config::STICKER_COLLECTION_NAME,
       png_sticker: Faraday::UploadIO.new(resized_image.path, 'image/png'),
       emojis: emojis
     )
