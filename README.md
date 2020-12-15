@@ -47,4 +47,4 @@ Images are not currently versioned (they're all tagged as `:latest`) as there's 
 
 ### Running the container in Kubernetes@Okteto
 
-// TODO: Specify about Okteto
+Integration with [Okteto](https://cloud.okteto.com) is set via `okteto-pipeline.yml` and deploys should be automated from git pushes.
