@@ -1,5 +1,7 @@
 # FASD Bot
 
+![Docker image: build + push](https://github.com/fasd-club/fasd-bot/workflows/Docker%20image%3A%20build%20+%20push/badge.svg)
+
 This is our Telegram bot, created with the goal of providing utilities and fun to the group.
 
 <img src="https://image.ibb.co/f24syR/3ca6c26c_e812_4e24_b3f6_bd279a2e0cd4.jpg" width="100"/>
@@ -30,4 +32,12 @@ Your local bot should be up and running! You should be able message it directly 
 
 ## Deployment
 
-// TODO: Specify once it's defined
+### Docker image
+
+Pushes to `master` automatically triggers a [GitHub Action](https://github.com/fasd-club/fasd-bot/actions) that will build the docker image and push it as [`fasdclub/telegram-bot:latest` to Docker Hub](https://hub.docker.com/repository/docker/fasdclub/telegram-bot).
+
+Images are not currently versioned (they're all tagged as `:latest`) as there's not many changes in the bot currently. If the need ever comes, we shuold start using git tags to [version-tag the builds automatically](https://docs.docker.com/ci-cd/github-actions/#push-tagged-versions-to-docker-hub).
+
+### Running the container in Kubernetes@Okteto
+
+// TODO: Specify about Okteto
