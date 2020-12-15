@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fasd-telegram-bot
+  name: fasd-telegram-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fasd-telegram-bot
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: fasd-telegram-bot
+    spec:
+      containers:
+      - image: fasdclub/telegram-bot
+        name: telegram-bot
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "256Mi"
+            cpu: "500m"
+        env:
+          - name: TELEGRAM_TOKEN
+            value: $TELEGRAM_TOKEN
+          - name: STICKER_COLLECTION_NAME
+            value: $STICKER_COLLECTION_NAME
+          - name: STICKER_COLLECTION_OWNER_ID
+            value: "$STICKER_COLLECTION_OWNER_ID"
