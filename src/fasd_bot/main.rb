@@ -13,6 +13,9 @@ HANDLERS = [
   GenericReplyHandler,
 ].freeze
 
+puts "Telegram bot initialized!"
+puts "Using [#{Config::STICKER_COLLECTION_NAME}] sticker collection"
+
 Telegram::Bot::Client.run(Config::TELEGRAM_TOKEN, timeout: 60) do |bot|
   bot.listen do |message|
     next unless message.text

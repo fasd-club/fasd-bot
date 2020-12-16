@@ -1,0 +1,3 @@
+deploy:
+- envsubst < deployment.template.yml > deployment.yml
+- kubectl apply -k .
