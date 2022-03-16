@@ -2,10 +2,8 @@
 # by default, if no interaction happens within 24 hours, the instance will automatically be put to sleep
 name: "Okteto keep awake"
 on:
-  [push]
-
-  # schedule:
-  #   - cron: "* * * * *"
+  schedule:
+    - cron: "* 5 * * *"
 jobs:
   build:
     runs-on: ubuntu-latest
