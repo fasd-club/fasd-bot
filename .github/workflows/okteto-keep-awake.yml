@@ -17,7 +17,7 @@ jobs:
       - name: "Activate Namespace"
         uses: okteto/namespace@latest
         with:
-          name: mathielo
+          namespace: mathielo
       - name: "Trigger the pipeline"
         uses: okteto/pipeline@latest
         with:
